@@ -1,214 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invincible Game Hub</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1a1a1a;
-            color: white;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Invincible Game Hub</title>
+ <style>
+ /* General Styles */
+ body {
+ font-family: 'Arial', sans-serif;
+ background-color: #1a1a1a;
+ color: white;
+ margin: 0;
+ padding: 0;
+ text-align: center;
+ }
 
-        /* Header */
-        header {
-            background-color: #00bcf0; /* Invincible Blue */
-            color: #ffe556; /* Invincible Yellow */
-            padding: 20px;
-            font-size: 28px;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px #000;
-        }
+ /* Header */
+ header {
+ background-color: #00bcf0; /* Invincible Blue */
+ color: #ffe556; /* Invincible Yellow */
+ padding: 20px;
+ font-size: 28px;
+ font-weight: bold;
+ text-shadow: 2px 2px 4px #000;
+ }
 
-        /* Blood Splatter Effect */
-        .blood-splatter {
-            background: url('https://i.imgur.com/3N1Fh8b.png') no-repeat center;
-            background-size: contain;
-            width: 100%;
-            height: 120px;
-            margin-top: -30px;
-        }
+ /* Blood Splatter Effect */
+ .blood-splatter {
+ background: url('https://i.imgur.com/3N1Fh8b.png') no-repeat center;
+ background-size: contain;
+ width: 100%;
+ height: 120px;
+ margin-top: -30px;
+ }
 
-        /* Sections */
-        .section {
-            padding: 20px;
-            margin-bottom: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-        }
+ /* Sections */
+ .section {
+ padding: 20px;
+ margin-bottom: 40px;
+ background: rgba(255, 255, 255, 0.1);
+ border-radius: 8px;
+ }
 
-        .section h2 {
-            background-color: #ffe556;
-            color: #1a1a1a;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 24px;
-            text-shadow: 1px 1px 2px #000;
-        }
+ .section h2 {
+ background-color: #ffe556;
+ color: #1a1a1a;
+ padding: 10px;
+ border-radius: 5px;
+ font-size: 24px;
+ text-shadow: 1px 1px 2px #000;
+ }
 
-        .tier, .tip, .team-building {
-            margin-bottom: 30px;
-        }
+ .tier, .tip, .team-building {
+ margin-bottom: 30px;
+ }
 
-        /* Character Layout */
-        .character {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
+ /* Character Layout */
+ .character {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 20px;
+ }
 
-        .character img {
-            border: 3px solid #00bcf0;
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            margin-right: 20px;
-        }
+ .character img {
+ border: 3px solid #00bcf0;
+ border-radius: 50%;
+ width: 100px;
+ height: 100px;
+ object-fit: cover;
+ margin-right: 20px;
+ }
 
-        .character-info {
-            max-width: 600px;
-            text-align: left;
-        }
+ .character-info {
+ max-width: 600px;
+ text-align: left;
+ }
 
-        .character-info h3 {
-            margin: 0;
-            color: #00bcf0;
-            font-size: 22px;
-        }
+ .character-info h3 {
+ margin: 0;
+ color: #00bcf0;
+ font-size: 22px;
+ }
 
-        .character-info p {
-            margin: 5px 0;
-            font-size: 16px;
-        }
+ .character-info p {
+ margin: 5px 0;
+ font-size: 16px;
+ }
 
-        /* Footer */
-        footer {
-            background-color: #00bcf0;
-            color: #ffe556;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            font-size: 14px;
-        }
-    </style>
+ /* Table Styles */
+ table {
+ width: 100%;
+ border-collapse: collapse;
+ margin-top: 10px;
+ }
+
+ th, td {
+ border: 1px solid #00bcf0;
+ padding: 8px;
+ text-align: center;
+ }
+
+ th {
+ background-color: #00bcf0;
+ color: #1a1a1a;
+ }
+
+ /* Footer */
+ footer {
+ background-color: #00bcf0;
+ color: #ffe556;
+ text-align: center;
+ padding: 15px;
+ position: fixed;
+ width: 100%;
+ bottom: 0;
+ font-size: 14px;
+ }
+ </style>
 </head>
 <body>
 
-    <header>
-        🦸‍♂️ INVINCIBLE GAME HUB 🦸‍♀️
-    </header>
+ <header>
+ 🦸‍♂️ INVINCIBLE GAME HUB 🦸‍♀️
+ </header>
 
-    <div class="blood-splatter"></div> <!-- Blood Effect -->
+ <!-- Blood Splatter Effect -->
+ <!-- Verify this URL works; replace with a similar image if broken -->
+ <div class="blood-splatter"></div>
 
-    <main>
+ <main>
 
-        <!-- Tips & Tricks -->
-        <section class="section">
-            <h2>⚡ PRO TIPS & TRICKS ⚡</h2>
-            <div class="tip">
-                <h3>💥 Train Your Viltrumites Early</h3>
-                <p>Viltrumites (Omni-Man, Thragg, Mark) scale over time. Prioritize **combat upgrades** to make them unstoppable.</p>
-            </div>
-            <div class="tip">
-                <h3>🛡️ Defense Matters</h3>
-                <p>Criminal and GDA units have **specific synergies**. Build **balanced teams** to counter enemies.</p>
-            </div>
-            <div class="tip">
-                <h3>💰 Upgrade Your Gear</h3>
-                <p>Items give **massive buffs**—don’t ignore them. Focus on **strength, speed, and endurance-based items.**</p>
-            </div>
-        </section>
+ <!-- Tips & Tricks -->
+ <section class="section">
+ <h2>⚡ PRO TIPS & TRICKS ⚡</h2>
+ <div class="tip">
+ <h3>📈 GDA Ops Tips</h3>
+ <ul>
+ <li>Prioritize GDA Ops for progression and resources.</li>
+ <li>Use faction synergies for better performance.</li>
+ <li>Place ranged/flyers to reduce downtime.</li>
+ <li>Prioritize event ops for rare resources.</li>
+ </ul>
+ </div>
+ <div class="tip">
+ <h3>🦸‍♂️ Hero Management</h3>
+ <ul>
+ <li>Recruit elite heroes for better stats and skills.</li>
+ <li>Level up multiple versions for ops farming.</li>
+ <li>Fuse duplicates as fodder for upgrades.</li>
+ </ul>
+ </div>
+ <div class="tip">
+ <h3>⚙️ Gear and Artifacts</h3>
+ <ul>
+ <li>Manage gear with a trickle-down strategy.</li>
+ <li>Target epic-ranked gear for reinforcements.</li>
+ <li>Equip artifacts for special abilities in combat.</li>
+ </ul>
+ </div>
+ <div class="tip">
+ <h3>💰 Shops and Resources</h3>
+ <ul>
+ <li>Level up shops for better offers.</li>
+ <li>Avoid gem refreshes except for Artifact mats.</li>
+ <li>Hoard resources for 5 pulls in The Lab.</li>
+ </ul>
+ </div>
+ <div class="tip">
+ <h3>🌟 Agent Level and Alliances</h3>
+ <ul>
+ <li>Agent level impacts unlocking new ops.</li>
+ <li>Alliances offer idle rewards; no major difference solo vs. group.</li>
+ <li>Tap the screen in Alliance tab to fire a laser (fun tip).</li>
+ </ul>
+ </div>
+ </section>
 
-        <!-- Tier List -->
-        <section class="section">
-            <h2>🔥 COMPLETE CHARACTER TIER LIST 🔥</h2>
+ <!-- Tier List -->
+ <section class="section">
+ <h2>🔥 COMPLETE CHARACTER TIER LIST 🔥</h2>
+ <!-- S-Tier -->
+ <div class="tier">
+ <h3>💀 S-TIER (Overpowered)</h3>
+ <div class="character">
+ <!-- Replace with actual image URL, e.g., from Ubisoft's official site or game screenshots -->
+ <img src="invincible.jpg" alt="Invincible">
+ <div class="character-info">
+ <h3>Invincible</h3>
+ <p>🚀 <strong>The Strongest</strong> – Dominates any fight, zero weaknesses.</p>
+ </div>
+ </div>
+ <div class="character">
+ <!-- Replace with actual image URL -->
+ <img src="omni-man.jpg" alt="Omni-Man">
+ <div class="character-info">
+ <h3>Omni-Man</h3>
+ <p>💪 <strong>Absolute Monster</strong> – Best damage dealer in the game.</p>
+ </div>
+ </div>
+ <div class="character">
+ <!-- Replace with actual image URL -->
+ <img src="atom-eve.jpg" alt="Atom Eve">
+ <div class="character-info">
+ <h3>Atom Eve</h3>
+ <p>✨ <strong>Support Queen</strong> – Provides crucial healing and buffs.</p>
+ </div>
+ </div>
+ <div class="character">
+ <!-- Replace with actual image URL -->
+ <img src="the-immortal.jpg" alt="The Immortal">
+ <div class="character-info">
+ <h3>The Immortal</h3>
+ <p>🔁 <strong>Revives After Death</strong> – Solid tank with revival ability.</p>
+ </div>
+ </div>
+ </div>
+ <!-- A-Tier -->
+ <div class="tier">
+ <h3>⚡ A-TIER (Strong Fighters)</h3>
+ <div class="character">
+ <!-- Replace with actual image URL -->
+ <img src="allen.jpg" alt="Allen the Alien">
+ <div class="character-info">
+ <h3>Allen the Alien</h3>
+ <p>🛡️ <strong>Tanky Fighter</strong> – Can take massive damage and dish it back.</p>
+ </div>
+ </div>
+ <div class="character">
+ <!-- Replace with actual image URL -->
+ <img src="war-woman.jpg" alt="War Woman">
+ <div class="character-info">
+ <h3>War Woman</h3>
+ <p>⚔️ <strong>Powerful Attacker</strong> – High damage output.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-            <!-- S-Tier -->
-            <div class="tier">
-                <h3>💀 S-TIER (Overpowered)</h3>
+ <!-- Team Building -->
+ <section class="section">
+ <h2>🚀 BUILDING THE BEST TEAM 🚀</h2>
+ <div class="team-building">
+ <h3>🦸‍♂️ Key Roles to Consider</h3>
+ <p>✅ <strong>Tank:</strong> Absorbs damage (e.g., Titan, The Immortal)</p>
+ <p>✅ <strong>DPS:</strong> High damage dealers (e.g., Invincible, Omni-Man)</p>
+ <p>✅ <strong>Support:</strong> Buffs teammates (e.g., Atom Eve, Cecil Stedman)</p>
+ </div>
+ <div class="team-building">
+ <h3>🔥 Best Team Combinations</h3>
+ <p>💀 <strong>Invincible + Titan + Atom Eve</strong> → High DPS & Healing with Earth's Defenders bonus</p>
+ <p>🔥 <strong>Omni-Man + The Immortal + Cecil Stedman</strong> → Aggressive Strategy with mixed factions</p>
+ <p>🛡️ <strong>Bulletproof + Lucan + Red Rush</strong> → Balanced team with Earth's Defenders synergy</p>
+ <p>📝 <strong>Note:</strong> Ensure your team has at least 3 heroes from the same faction to benefit from synergy bonuses. Check the Faction Bonuses table below.</p>
+ </div>
+ <div class="team-building">
+ <h3>⚔️ Faction Bonuses</h3>
+ <table>
+ <thead>
+ <tr>
+ <th>Faction Composition</th>
+ <th>HP Boost</th>
+ <th>Attack Boost</th>
+ <th>Defense Boost</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>2 Same Faction</td>
+ <td>3%</td>
+ <td>-</td>
+ <td>-</td>
+ </tr>
+ <tr>
+ <td>3 Same Faction</td>
+ <td>6%</td>
+ <td>2%</td>
+ <td>-</td>
+ </tr>
+ <tr>
+ <td>4 Same Faction</td>
+ <td>9%</td>
+ <td>4%</td>
+ <td>4%</td>
+ </tr>
+ <tr>
+ <td>5 Same Faction</td>
+ <td>12%</td>
+ <td>6%</td>
+ <td>6%</td>
+ </tr>
+ <tr>
+ <td>2 Same, 2 Different</td>
+ <td>8%</td>
+ <td>3%</td>
+ <td>3%</td>
+ </tr>
+ <tr>
+ <td>3 Same, 2 Different</td>
+ <td>10%</td>
+ <td>5%</td>
+ <td>5%</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </section>
 
-                <div class="character">
-                    <img src="https://i.imgur.com/xzRv2Jd.jpg" alt="Omni-Man">
-                    <div class="character-info">
-                        <h3>Omni-Man</h3>
-                        <p>💪 **Absolute Monster** – Best damage dealer in the game.</p>
-                    </div>
-                </div>
+ </main>
 
-                <div class="character">
-                    <img src="https://i.imgur.com/94zFfQr.jpg" alt="Thragg">
-                    <div class="character-info">
-                        <h3>Thragg</h3>
-                        <p>🚀 **The Strongest** – Dominates any fight, zero weaknesses.</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- A-Tier -->
-            <div class="tier">
-                <h3>⚡ A-TIER (Strong Fighters)</h3>
-
-                <div class="character">
-                    <img src="https://i.imgur.com/Mgjl76F.jpg" alt="Allen the Alien">
-                    <div class="character-info">
-                        <h3>Allen the Alien</h3>
-                        <p>🛡️ **Tanky Fighter** – Can take massive damage and dish it back.</p>
-                    </div>
-                </div>
-
-                <div class="character">
-                    <img src="https://i.imgur.com/8Mbhs48.jpg" alt="The Immortal">
-                    <div class="character-info">
-                        <h3>The Immortal</h3>
-                        <p>🔁 **Revives After Death** – Solid but weaker than Viltrumites.</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Team Building -->
-        <section class="section">
-            <h2>🚀 BUILDING THE BEST TEAM 🚀</h2>
-            <div class="team-building">
-                <h3>🦸‍♂️ Key Roles to Consider</h3>
-                <p>✅ **Tank:** Absorbs damage (Allen, Immortal)  
-                   ✅ **DPS:** High damage dealers (Omni-Man, Thragg)  
-                   ✅ **Support:** Buffs teammates (Cecil, Atom Eve)</p>
-            </div>
-
-            <div class="team-building">
-                <h3>🔥 Best Team Combinations</h3>
-                <p>💀 **Omni-Man + Allen + Atom Eve** → High DPS & Healing  
-                   🔥 **Thragg + Immortal + Cecil** → Aggressive Strategy  
-                   🛡️ **Mark + Eve + GDA Soldiers** → Balanced Team</p>
-            </div>
-
-            <div class="team-building">
-                <h3>⚔️ Factions & Chemistry</h3>
-                <p>🟥 **Viltrumites** → Best raw power, low teamwork  
-                   🟦 **GDA** → Balanced, strong synergies  
-                   🟨 **Criminals** → High risk, high reward  
-                   🟩 **Heroes** → Good support & control</p>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        🦸‍♂️ Invincible Game Hub | Stay Unstoppable 🦸‍♀️
-    </footer>
+ <footer>
+ 🦸‍♂️ Invincible Game Hub | Stay Unstoppable 🦸‍♀️
+ <br>
+ <a href="https://www.ubisoft.com/en-gb/game/invincible-guarding-the-globe" style="color: #ffe556;">Official Game Page</a>
+ </footer>
 
 </body>
 </html>
+​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
