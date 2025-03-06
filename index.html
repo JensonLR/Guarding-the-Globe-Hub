@@ -1,139 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guarding the Globe Hub</title>
-  
-  <style>
-    /* Use a built-in font similar to the Invincible logo */
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #000; /* Deep black base */
-      color: #fff;
-      font-family: Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;
-      background-image: radial-gradient(rgba(255, 0, 0, 0.2) 10%, transparent 11%), 
-                        radial-gradient(rgba(255, 0, 0, 0.15) 10%, transparent 11%);
-      background-size: 300px 300px;
-      background-position: 0 0, 150px 150px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invincible Game Hub</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-    /* Header (Title Bar) */
-    header {
-      background-color: #b30000; /* Bold red like Season 2 */
-      padding: 20px;
-      text-align: center;
-      border-bottom: 3px solid #000;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.8em;
-      text-transform: uppercase;
-      text-shadow: 3px 3px 3px #f3d03c; /* Golden-yellow glow */
-    }
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
+        /* Header */
+        header {
+            background-color: #00bcf0; /* Invincible Blue */
+            color: #ffe556; /* Invincible Yellow */
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000;
+        }
 
-    /* Navigation Bar */
-    nav {
-      background-color: rgba(0, 0, 0, 0.85);
-      text-align: center;
-      padding: 12px 0;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 20px;
-      font-size: 1.2em;
-    }
-    nav a:hover {
-      color: #f3d03c;
-    }
+        /* Blood Splatter Effect */
+        .blood-splatter {
+            background: url('https://i.imgur.com/3N1Fh8b.png') no-repeat center;
+            background-size: contain;
+            width: 100%;
+            height: 120px;
+            margin-top: -30px;
+        }
 
-    /* Sections */
-    section {
-      padding: 25px;
-      margin: 25px;
-      background-color: rgba(0, 0, 0, 0.8);
-      border-radius: 8px;
-    }
-    h2 {
-      border-bottom: 2px solid #b30000;
-      padding-bottom: 10px;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    li {
-      margin: 10px 0;
-    }
+        /* Sections */
+        .section {
+            padding: 20px;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
 
-    /* Buttons */
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px 0;
-      background-color: #0077cc; /* Invincible suit blue */
-      color: #fff;
-      text-transform: uppercase;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background-color: #005fa3;
-    }
+        .section h2 {
+            background-color: #ffe556;
+            color: #1a1a1a;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 24px;
+            text-shadow: 1px 1px 2px #000;
+        }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #111;
-      border-top: 1px solid #b30000;
-      font-size: 0.9em;
-    }
-  </style>
+        .tier, .tip, .team-building {
+            margin-bottom: 30px;
+        }
+
+        /* Character Layout */
+        .character {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .character img {
+            border: 3px solid #00bcf0;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .character-info {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .character-info h3 {
+            margin: 0;
+            color: #00bcf0;
+            font-size: 22px;
+        }
+
+        .character-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #00bcf0;
+            color: #ffe556;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Guarding the Globe</h1>
-    <p>Suit Up, Hero—Join the Ranks to Defend Earth!</p>
-  </header>
-  <nav>
-    <a href="#tips">Battle Tactics</a>
-    <a href="#tierlist">Hero Rankings</a>
-    <a href="#teambuilding">Squad Synergy</a>
-  </nav>
-  <section id="tips">
-    <h2>Battle Tactics for New Recruits</h2>
-    <p>
-      In the fight to guard the globe, every hero must hone their skills. Whether you’re facing street-level crooks or the looming threat of Viltrumite forces, mastering the main missions is your first step. Earn XP, upgrade your gear, and rank up your high-elite heroes. Remember: a hero’s resolve is forged in the heat of battle—stay sharp, and never back down.
-    </p>
-  </section>
-  <section id="tierlist">
-    <h2>Hero Rankings</h2>
-    <ul>
-      <li><strong>S-Tier:</strong> Invincible, Omni-Man, Battle Beast, Atom Eve</li>
-      <li><strong>A-Tier:</strong> Red Rush, Robot, Titan, Immortal</li>
-      <li><strong>B-Tier:</strong> Early recruits like Dupli-Kate (ideal for training and early missions)</li>
-    </ul>
-    <p>
-      These rankings, drawn from community consensus and trusted guides, let you know which heroes will stand tall when the battle for Earth is on the line.
-    </p>
-  </section>
-  <section id="teambuilding">
-    <h2>Squad Synergy & Team Building</h2>
-    <p>
-      Building the ultimate team means more than just assembling the strongest heroes. Strategically position your heavy hitters in the rear for maximum damage, deploy steadfast defenders upfront to absorb enemy blows, and integrate support heroes to keep your squad in peak fighting condition. Whether you’re rolling with GDA-trained elites or renegade Criminals, every role counts. Adapt your team to counter specific threats and embrace the unpredictability of cosmic battles.
-    </p>
-    <button class="btn">Build Your Team</button>
-  </section>
-  <footer>
-    <p>&copy; 2025 Guarding the Globe Hub. Stand tall, fight hard, and never back down.</p>
-  </footer>
+
+    <header>
+        🦸‍♂️ INVINCIBLE GAME HUB 🦸‍♀️
+    </header>
+
+    <div class="blood-splatter"></div> <!-- Blood Effect -->
+
+    <main>
+
+        <!-- Tips & Tricks -->
+        <section class="section">
+            <h2>⚡ PRO TIPS & TRICKS ⚡</h2>
+            <div class="tip">
+                <h3>💥 Train Your Viltrumites Early</h3>
+                <p>Viltrumites (Omni-Man, Thragg, Mark) scale over time. Prioritize **combat upgrades** to make them unstoppable.</p>
+            </div>
+            <div class="tip">
+                <h3>🛡️ Defense Matters</h3>
+                <p>Criminal and GDA units have **specific synergies**. Build **balanced teams** to counter enemies.</p>
+            </div>
+            <div class="tip">
+                <h3>💰 Upgrade Your Gear</h3>
+                <p>Items give **massive buffs**—don’t ignore them. Focus on **strength, speed, and endurance-based items.**</p>
+            </div>
+        </section>
+
+        <!-- Tier List -->
+        <section class="section">
+            <h2>🔥 COMPLETE CHARACTER TIER LIST 🔥</h2>
+
+            <!-- S-Tier -->
+            <div class="tier">
+                <h3>💀 S-TIER (Overpowered)</h3>
+
+                <div class="character">
+                    <img src="https://i.imgur.com/xzRv2Jd.jpg" alt="Omni-Man">
+                    <div class="character-info">
+                        <h3>Omni-Man</h3>
+                        <p>💪 **Absolute Monster** – Best damage dealer in the game.</p>
+                    </div>
+                </div>
+
+                <div class="character">
+                    <img src="https://i.imgur.com/94zFfQr.jpg" alt="Thragg">
+                    <div class="character-info">
+                        <h3>Thragg</h3>
+                        <p>🚀 **The Strongest** – Dominates any fight, zero weaknesses.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- A-Tier -->
+            <div class="tier">
+                <h3>⚡ A-TIER (Strong Fighters)</h3>
+
+                <div class="character">
+                    <img src="https://i.imgur.com/Mgjl76F.jpg" alt="Allen the Alien">
+                    <div class="character-info">
+                        <h3>Allen the Alien</h3>
+                        <p>🛡️ **Tanky Fighter** – Can take massive damage and dish it back.</p>
+                    </div>
+                </div>
+
+                <div class="character">
+                    <img src="https://i.imgur.com/8Mbhs48.jpg" alt="The Immortal">
+                    <div class="character-info">
+                        <h3>The Immortal</h3>
+                        <p>🔁 **Revives After Death** – Solid but weaker than Viltrumites.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Team Building -->
+        <section class="section">
+            <h2>🚀 BUILDING THE BEST TEAM 🚀</h2>
+            <div class="team-building">
+                <h3>🦸‍♂️ Key Roles to Consider</h3>
+                <p>✅ **Tank:** Absorbs damage (Allen, Immortal)  
+                   ✅ **DPS:** High damage dealers (Omni-Man, Thragg)  
+                   ✅ **Support:** Buffs teammates (Cecil, Atom Eve)</p>
+            </div>
+
+            <div class="team-building">
+                <h3>🔥 Best Team Combinations</h3>
+                <p>💀 **Omni-Man + Allen + Atom Eve** → High DPS & Healing  
+                   🔥 **Thragg + Immortal + Cecil** → Aggressive Strategy  
+                   🛡️ **Mark + Eve + GDA Soldiers** → Balanced Team</p>
+            </div>
+
+            <div class="team-building">
+                <h3>⚔️ Factions & Chemistry</h3>
+                <p>🟥 **Viltrumites** → Best raw power, low teamwork  
+                   🟦 **GDA** → Balanced, strong synergies  
+                   🟨 **Criminals** → High risk, high reward  
+                   🟩 **Heroes** → Good support & control</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        🦸‍♂️ Invincible Game Hub | Stay Unstoppable 🦸‍♀️
+    </footer>
+
 </body>
 </html>
